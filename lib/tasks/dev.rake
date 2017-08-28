@@ -36,6 +36,8 @@ namespace :dev do
     Order.find_each do |order|
       order.update(:total_price => order.price * order.quantity)
     end
+
+    Order.find_each{ |order| order.update(:status => ['paid','cancled'].sample) }
   end
 
   task :generate_roles => :environment do
