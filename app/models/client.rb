@@ -15,8 +15,21 @@ end
 # c2.name = "should fail"
 # c2.save # 抛出 ActiveRecord::StaleObjectError
 
-Client.transaction do
-  i = Client.lock.first
-  i.name = "Mike"
-  i.save!
-end
+# Client.transaction do
+#   i = Client.lock.first
+#   i.name = "Mike"
+#   i.save!
+# end
+
+# clients = Client.limit(6)
+#
+# clients.each do |client|
+#   puts client.address.city
+# end
+
+
+# clients = Client.includes(:address).limit(6)
+#
+# clients.each do |client|
+#   puts client.address.city
+# end
