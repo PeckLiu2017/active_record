@@ -17,10 +17,9 @@ namespace :dev do
       )
       puts "Generate Client #{i}"
     end
-
-    Client.find_each do |client|
-      client.update(:role_id => Role.pluck(:id).sample)
-    end
+    # Client.find_each do |client|
+    #   client.update(:role_id => Role.pluck(:id).sample)
+    # end
   end
 
   task :generate_orders => :environment do
@@ -52,6 +51,27 @@ namespace :dev do
       role.update(:client_id => Client.pluck(:id).sample)
     end
 
+    Client.find_each do |client|
+      client.update(:role_id => Role.pluck(:id).sample)
+    end
   end
 
+  task :generate_addresses => :environment do
+    1000.times do |i|
+      Address.create!(
+        :client_id => Client.pluck(:id).sample,
+        :country => Faker::Address.country,
+        :province => Faker::Address.state,
+        :city => Faker::Address.city,
+        :county => Faker::Address.street_name
+      )
+      puts "Generate Address #{i}"
+    end
+  end
+
+  Client.find_each do |client|
+    # client.update(:orders_count => client.orders.count.to_s)
+    client.orders_count = client.orders.count.to_s
+    client.save!
+  end
 end
