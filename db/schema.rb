@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170827194130) do
+ActiveRecord::Schema.define(version: 20170828051241) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "country"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20170827194130) do
     t.string   "telephone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "role_id"
+  end
+
+  create_table "clients_roles", id: false, force: :cascade do |t|
+    t.integer "client_id"
+    t.integer "role_id"
+    t.index ["client_id"], name: "index_clients_roles_on_client_id"
+    t.index ["role_id"], name: "index_clients_roles_on_role_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -35,12 +43,15 @@ ActiveRecord::Schema.define(version: 20170827194130) do
     t.string   "total_price"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "client_id"
+    t.index ["client_id"], name: "index_orders_on_client_id"
   end
 
   create_table "roles", force: :cascade do |t|
     t.string   "info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "client_id"
   end
 
 end
