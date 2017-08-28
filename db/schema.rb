@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170828064551) do
+ActiveRecord::Schema.define(version: 20170828075929) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "country"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20170828064551) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "role_id"
-    t.string   "orders_count"
+    t.integer  "orders_count"
   end
 
   create_table "clients_roles", id: false, force: :cascade do |t|
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20170828064551) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "client_id"
+    t.string   "status"
     t.index ["client_id"], name: "index_orders_on_client_id"
   end
 
@@ -54,10 +55,6 @@ ActiveRecord::Schema.define(version: 20170828064551) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "client_id"
-  end
-
-  Client.find_each do |client|
-      client.update(:orders_count => client.orders.count.to_s)
   end
 
 end

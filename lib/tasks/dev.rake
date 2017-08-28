@@ -69,9 +69,7 @@ namespace :dev do
     end
   end
 
-  Client.find_each do |client|
-    # client.update(:orders_count => client.orders.count.to_s)
-    client.orders_count = client.orders.count.to_s
-    client.save!
-  end
+  # Client.find_each do |client|
+  #   client.update!(:orders_count => client.orders.count)
+  # end
 end
