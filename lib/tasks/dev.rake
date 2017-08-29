@@ -108,6 +108,38 @@ namespace :dev do
       puts "Generate PictureFile #{i}"
     end
   end
+
+  task :generate_authors_and_books => :environment do
+    1000.times do |i|
+      Author.create!(
+        :name => Faker::Friends.character,
+        :email => Faker::Internet.free_email,
+        :address => Faker::Address.state + Faker::Address.city + Faker::Address.street_address,
+      )
+      Book.create!(
+        :author_id => Author.last.id,
+        :name => Faker::Book.title,
+        :published_at => Time.now - rand(20).years - rand(12).months - rand(365).days,
+        # :info => Faker::Lorem.sentence
+      )
+      puts "Generate author and books #{i}"
+    end
+  end
+
+  task :generate_suppliers_and_accounts => :environment do
+    1000.times do |i|
+      Supplier.create!(
+        :name => Faker::Friends.character,
+      )
+      Account.create!(
+        :supplier_id => Supplier.last.id,
+        :account_number => Faker::Number.number(10),
+        # :info => Faker::Lorem.sentence
+      )
+      puts "Generate suppliers and accounts #{i}"
+    end
+  end
+
   # Client.find_each do |client|
   #   client.update!(:orders_count => client.orders.count)
   # end
