@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170829032008) do
+ActiveRecord::Schema.define(version: 20170829034444) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "country"
@@ -67,6 +67,14 @@ ActiveRecord::Schema.define(version: 20170829032008) do
     t.integer  "client_id"
     t.string   "status"
     t.index ["client_id"], name: "index_orders_on_client_id"
+  end
+
+  create_table "picture_files", force: :cascade do |t|
+    t.string   "filepath"
+    t.string   "filename"
+    t.string   "fileinfo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "roles", force: :cascade do |t|

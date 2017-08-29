@@ -97,6 +97,17 @@ namespace :dev do
       puts "Generate Comment #{i}"
     end
   end
+
+  task :generate_picturefiles => :environment do
+    1000.times do |i|
+      PictureFile.create!(
+        :filepath => Faker::Internet.url,
+        :filename => Faker::Lorem.word,
+        :fileinfo => Faker::Lorem.paragraph,
+      )
+      puts "Generate PictureFile #{i}"
+    end
+  end
   # Client.find_each do |client|
   #   client.update!(:orders_count => client.orders.count)
   # end
