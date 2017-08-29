@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170829124308) do
+ActiveRecord::Schema.define(version: 20170829132021) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "supplier_id"
@@ -91,6 +91,12 @@ ActiveRecord::Schema.define(version: 20170829124308) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "documents", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "orders", force: :cascade do |t|
     t.string   "product"
     t.string   "price"
@@ -101,6 +107,14 @@ ActiveRecord::Schema.define(version: 20170829124308) do
     t.integer  "client_id"
     t.string   "status"
     t.index ["client_id"], name: "index_orders_on_client_id"
+  end
+
+  create_table "paragraphs", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "section_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_id"], name: "index_paragraphs_on_section_id"
   end
 
   create_table "patients", force: :cascade do |t|
@@ -128,6 +142,14 @@ ActiveRecord::Schema.define(version: 20170829124308) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "client_id"
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "document_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["document_id"], name: "index_sections_on_document_id"
   end
 
   create_table "suppliers", force: :cascade do |t|

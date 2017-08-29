@@ -140,6 +140,23 @@ namespace :dev do
     end
   end
 
+  task :generate_documents_sections_and_paragraphs => :environment do
+    1000.times do |i|
+      Document.create!(
+        :name => Faker::Lorem.word,
+      )
+      Section.create!(
+        :document_id => Document.last.id,
+        :content => Faker::Lorem.paragraph,
+      )
+      Paragraph.create!(
+        :section_id => Section.last.id,
+        :content => Faker::Lorem.paragraph
+      )
+      puts "Generate documents sections and paragraphs #{i}"
+    end
+  end
+
   # Client.find_each do |client|
   #   client.update!(:orders_count => client.orders.count)
   # end
