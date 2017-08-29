@@ -87,6 +87,16 @@ namespace :dev do
     end
   end
 
+  task :generate_comments => :environment do
+    1000.times do |i|
+      Comment.create!(
+        :article_id => Article.pluck(:id).sample,
+        :title => Faker::Lorem.word,
+        :paragraph => Faker::Lorem.paragraph,
+      )
+      puts "Generate Comment #{i}"
+    end
+  end
   # Client.find_each do |client|
   #   client.update!(:orders_count => client.orders.count)
   # end
