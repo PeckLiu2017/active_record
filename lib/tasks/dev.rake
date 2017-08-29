@@ -167,6 +167,23 @@ namespace :dev do
     end
   end
 
+  task :generate_pictures_employees_and_products => :environment do
+    1000.times do |i|
+      Employee.create!(
+        :name => Faker::Friends.character
+      )
+      Product.create!(
+        :name => Faker::Friends.character
+      )
+      Picture.create!(
+        :name => Faker::Cat.name,
+        :imageable_id => Employee.last.id,
+        :imageable_type => ["Employee","Product"].sample
+      )
+      puts "Generate pictures employees and products #{i}"
+    end
+  end
+
   # Client.find_each do |client|
   #   client.update!(:orders_count => client.orders.count)
   # end
