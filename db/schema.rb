@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170829132021) do
+ActiveRecord::Schema.define(version: 20170829135331) do
+
+  create_table "accounthistroys", force: :cascade do |t|
+    t.string   "order"
+    t.datetime "order_date"
+    t.integer  "account_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "credit_histroy"
+    t.index ["account_id"], name: "index_accounthistroys_on_account_id"
+  end
 
   create_table "accounts", force: :cascade do |t|
     t.integer  "supplier_id"

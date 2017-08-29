@@ -157,6 +157,16 @@ namespace :dev do
     end
   end
 
+  task :generate_account_histories => :environment do
+    1000.times do |i|
+      Accounthistroy.create!(
+        :account_id => Author.pluck(:id).sample,
+        :credit_histroy => rand(5)
+      )
+      puts "Generate Accounthistroy #{i}"
+    end
+  end
+
   # Client.find_each do |client|
   #   client.update!(:orders_count => client.orders.count)
   # end
