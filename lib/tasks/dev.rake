@@ -71,6 +71,22 @@ namespace :dev do
     end
   end
 
+  task :generate_users_and_articles => :environment do
+    1000.times do |i|
+      User.create!(
+        :username => Faker::Name.name ,
+        :password => Faker::Number.number(10),
+      )
+      Article.create!(
+        :user_id  => User.last.id,
+        :title => Faker::Lorem.word,
+        :summary => Faker::Lorem.sentences(1),
+        :text => Faker::Lorem.paragraph,
+      )
+      puts "Generate user_and_article #{i}"
+    end
+  end
+
   # Client.find_each do |client|
   #   client.update!(:orders_count => client.orders.count)
   # end
