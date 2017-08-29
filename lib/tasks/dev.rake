@@ -187,4 +187,8 @@ namespace :dev do
   # Client.find_each do |client|
   #   client.update!(:orders_count => client.orders.count)
   # end
+  # 3.times do |i|
+  #   Employee.find_each(:start => 7,:finish => 501 ){ |e| e.update!(:manager_id => 2 )}
+  #   Employee.find_each(:start => i * 100 + 703,:finish => i * 100 + 802){ |e| e.update!(:manager_id => i + 4 ) }
+  # end
 end

@@ -109,8 +109,10 @@ ActiveRecord::Schema.define(version: 20170829145145) do
 
   create_table "employees", force: :cascade do |t|
     t.string   "name"
+    t.integer  "manager_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["manager_id"], name: "index_employees_on_manager_id"
   end
 
   create_table "orders", force: :cascade do |t|
