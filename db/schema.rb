@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170830041356) do
+ActiveRecord::Schema.define(version: 20170830132659) do
 
   create_table "accounthistroys", force: :cascade do |t|
     t.string   "order"
@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(version: 20170830041356) do
   create_table "accounts", force: :cascade do |t|
     t.integer  "supplier_id"
     t.string   "account_number"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "representative_id"
     t.index ["supplier_id"], name: "index_accounts_on_supplier_id", unique: true
   end
 
@@ -77,8 +78,10 @@ ActiveRecord::Schema.define(version: 20170830041356) do
     t.string   "name"
     t.string   "email"
     t.string   "address"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.datetime "books_updated_at"
+    t.boolean  "active"
   end
 
   create_table "books", force: :cascade do |t|
@@ -126,6 +129,14 @@ ActiveRecord::Schema.define(version: 20170830041356) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["manager_id"], name: "index_employees_on_manager_id"
+  end
+
+  create_table "line_items", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "book_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_line_items_on_book_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -186,6 +197,12 @@ ActiveRecord::Schema.define(version: 20170830041356) do
   end
 
   create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "representatives", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -198,6 +198,26 @@ namespace :dev do
     end
   end
 
+  task :generate_line_items => :environment do
+    1000.times do |i|
+      LineItem.create!(
+        :book_id => rand(1..998),
+        :content =>  Faker::Lorem.paragraph
+      )
+      puts "Generate LineItems #{i}"
+    end
+  end
+
+  task :generate_representatives => :environment do
+    1000.times do |i|
+      Representative.create!(
+        :name =>  Faker::Friends.character
+      )
+      puts "Generate LineItems #{i}"
+    end
+  end
+
+  # Account.find_each(:start => 500){ |a| a.update!(:representative_id => rand(1..1000) ) }
 
   # Client.find_each do |client|
   #   client.update!(:orders_count => client.orders.count)
