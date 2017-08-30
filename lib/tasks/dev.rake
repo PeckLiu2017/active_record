@@ -184,6 +184,21 @@ namespace :dev do
     end
   end
 
+  task :generate_assemblies_and_parts => :environment do
+    1000.times do |i|
+      Assembly.create!(
+        :part_id => rand(1..1000),
+        :name => Faker::Commerce.product_name
+      )
+      Part.create!(
+        :assembly_id => rand(1..1000),
+        :name => Faker::Commerce.material
+      )
+      puts "Generate assemblies and parts #{i}"
+    end
+  end
+
+
   # Client.find_each do |client|
   #   client.update!(:orders_count => client.orders.count)
   # end

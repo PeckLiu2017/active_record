@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170829145145) do
+ActiveRecord::Schema.define(version: 20170830012724) do
 
   create_table "accounthistroys", force: :cascade do |t|
     t.string   "order"
@@ -58,6 +58,19 @@ ActiveRecord::Schema.define(version: 20170829145145) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "assemblies", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "part_id"
+    t.index ["part_id"], name: "index_assemblies_on_part_id"
+  end
+
+  create_table "assemblies_parts", id: false, force: :cascade do |t|
+    t.integer "assembly_id"
+    t.integer "part_id"
   end
 
   create_table "authors", force: :cascade do |t|
@@ -133,6 +146,14 @@ ActiveRecord::Schema.define(version: 20170829145145) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["section_id"], name: "index_paragraphs_on_section_id"
+  end
+
+  create_table "parts", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "assembly_id"
+    t.index ["assembly_id"], name: "index_parts_on_assembly_id"
   end
 
   create_table "patients", force: :cascade do |t|
