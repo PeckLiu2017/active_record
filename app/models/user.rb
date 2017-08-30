@@ -7,5 +7,5 @@ class User < ApplicationRecord
   after_find do
     puts "You have found an object!"
   end
-  self.primary_key = 'guid' # 主键是 guid，不是 id
+  # self.primary_key = 'guid' # 主键是 guid，不是 id
 end
