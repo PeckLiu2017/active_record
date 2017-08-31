@@ -9,5 +9,7 @@ class Book < ApplicationRecord
   # a.first_name == b.writer.first_name # => true
   # a.first_name = 'David'
   # a.first_name == b.writer.first_name # => false
-
+  def find_associations
+    puts self.id if self.author.nil?
+  end
 end

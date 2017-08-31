@@ -217,8 +217,17 @@ namespace :dev do
     end
   end
 
-  # Account.find_each(:start => 500){ |a| a.update!(:representative_id => rand(1..1000) ) }
+  task :generate_todos => :environment do
+    1000.times do |i|
+      Todo.create!(
+        :event =>  "event #{i}" 
+      )
+      puts "Generate Todos #{i}"
+    end
+  end
 
+  # Account.find_each(:start => 500){ |a| a.update!(:representative_id => rand(1..1000) ) }
+  # Book.find_each(:start => 500,:finish => 700){|b| puts "#{b.id}" if b.author.nil?}
   # Client.find_each do |client|
   #   client.update!(:orders_count => client.orders.count)
   # end

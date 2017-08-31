@@ -8,4 +8,5 @@ class User < ApplicationRecord
     puts "You have found an object!"
   end
   # self.primary_key = 'guid' # 主键是 guid，不是 id
+  has_many :todos, primary_key: :guid
 end
