@@ -16,4 +16,9 @@ class Person < ApplicationRecord
   validates :password, length: { in: 6..20 }
   # validates :password, length: { is: 6 }
   # validates :name, uniqueness: { case_sensitive: false }
+
+  # validates_with GoodnessValidator, fields: [:first_name, :last_name]
+  validate do |person|
+    GoodnessValidator.new(person).validate
+  end
 end
