@@ -1,0 +1,7 @@
+<%= simple_form_for @person do |f| %>
+<div class="form-group">
+  <%= f.input :name, input_html: { class:"form_control"} %>
+  <%= f.input :email, input_html: {class:"form_control"} %>
+</div>
+<%= f.submit "Submit", :disable_with => 'Submiting...' %>
+<% end %>

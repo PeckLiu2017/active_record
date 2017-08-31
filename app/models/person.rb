@@ -9,5 +9,6 @@ class Person < ApplicationRecord
   validates :terms_of_service, acceptance: { accept: ['TRUE', 'accepted'], message: 'must be abided' }
   # validates :terms_of_service, acceptance: { message: 'must be abided' }
   # validates :terms_of_service, acceptance: { accept: 'yes' }
-  # validates :eula, acceptance: { accept: ['TRUE', 'accepted'] }
+  validates :email, confirmation: true
+  validates :email_confirmation, presence: true
 end
