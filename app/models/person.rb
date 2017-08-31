@@ -18,7 +18,11 @@ class Person < ApplicationRecord
   # validates :name, uniqueness: { case_sensitive: false }
 
   # validates_with GoodnessValidator, fields: [:first_name, :last_name]
-  validate do |person|
-    GoodnessValidator.new(person).validate
+  # validate do |person|
+  #   GoodnessValidator.new(person).validate
+  # end
+
+  validates_each :name, :last_name do |record, attr, value|
+    record.errors.add(attr, 'must start with upper case') if value =~ /\A[[:lower:]]/
   end
 end
