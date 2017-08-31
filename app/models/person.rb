@@ -9,9 +9,11 @@ class Person < ApplicationRecord
   validates :terms_of_service, acceptance: { accept: ['TRUE', 'accepted'], message: 'must be abided' }
   # validates :terms_of_service, acceptance: { message: 'must be abided' }
   # validates :terms_of_service, acceptance: { accept: 'yes' }
-  validates :email, confirmation: true
+  validates :email, confirmation: true, uniqueness: { scope: :name,
+    message: "should happen once per name" }
   validates :email_confirmation, presence: true
   validates :name, length: { minimum: 6 }
   validates :password, length: { in: 6..20 }
   # validates :password, length: { is: 6 }
+  # validates :name, uniqueness: { case_sensitive: false }
 end
