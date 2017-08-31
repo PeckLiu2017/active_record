@@ -11,4 +11,7 @@ class Person < ApplicationRecord
   # validates :terms_of_service, acceptance: { accept: 'yes' }
   validates :email, confirmation: true
   validates :email_confirmation, presence: true
+  validates :name, length: { minimum: 6 }
+  validates :password, length: { in: 6..20 }
+  # validates :password, length: { is: 6 }
 end
