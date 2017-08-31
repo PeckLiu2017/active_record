@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170831124830) do
+ActiveRecord::Schema.define(version: 20170831131801) do
 
   create_table "accounthistroys", force: :cascade do |t|
     t.string   "order"
@@ -181,6 +181,7 @@ ActiveRecord::Schema.define(version: 20170831124830) do
     t.string   "terms_of_service"
     t.string   "email"
     t.string   "password"
+    t.string   "bio"
   end
 
   create_table "physicians", force: :cascade do |t|
@@ -204,6 +205,13 @@ ActiveRecord::Schema.define(version: 20170831124830) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.index ["imageable_type", "imageable_id"], name: "index_pictures_on_imageable_type_and_imageable_id"
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string   "points"
+    t.string   "games_played"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "products", force: :cascade do |t|
