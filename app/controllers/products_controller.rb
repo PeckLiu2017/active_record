@@ -1,4 +1,10 @@
 class ProductsController < ApplicationController
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    render js: "alert('delete complete!');"
+  end
+
   def edit
     @product = Product.find(params[:id])
   end
@@ -23,7 +29,9 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    render html: "<strong>Not Found Test</strong>".html_safe
+    # render html: "<strong>Not Found Test</strong>".html_safe
+    # render json: @product
+    # render xml: @product # test failed
   end
 
   private
