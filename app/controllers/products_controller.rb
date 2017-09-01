@@ -26,6 +26,7 @@ class ProductsController < ApplicationController
     # render inline: "xml.p {'Horrid coding practice!'}", type: :builder
     # render plain: "OK"
     # render body: "#{@products}"
+    render layout: false
   end
 
   def show
@@ -35,7 +36,10 @@ class ProductsController < ApplicationController
     # render xml: @product # test failed
     # This XML file does not appear to have any style information associated with it. The document tree is shown below.
     # render file: "/Users/peckliu/Ruby project/active_record/app/views/products/show.html.erb", content_type: "application/xml"
-    render layout: "special_layout"
+    # render layout: "special_layout"
+    # render json: @product, location: product_url(@product)
+    # render :xml => { :error => 'Not found' }, :status => 404
+    render formats: :xml # Missing template？
   end
 
   private
