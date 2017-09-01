@@ -17,7 +17,8 @@ class ProductsController < ApplicationController
   def index
     @products = Product.first(10)
     # render inline: "<% @products.each do |p| %><p><%= p.name %></p><% end %>"
-    render inline: "xml.p {'Horrid coding practice!'}", type: :builder
+    # render inline: "xml.p {'Horrid coding practice!'}", type: :builder
+    # render plain: "OK"
   end
 
   def show
