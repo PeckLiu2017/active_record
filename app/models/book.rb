@@ -1,6 +1,6 @@
 class Book < ApplicationRecord
-  # b.errors.messages => {:name=>["名字不能为空"]} 
-  validates :name, presence: { present: true, message: '名字不能为空' }
+  # b.errors.messages => {:name=>["名字不能为空"]}
+  validates :title, presence: { present: true, message: '名字不能为空' }
   # b.errors.messages => {:name=>["can't be blank", "名字不能为空"]}
   # validates :name, presence: { message: '名字不能为空' }
   belongs_to :author
