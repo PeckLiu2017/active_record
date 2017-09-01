@@ -19,8 +19,13 @@ class BooksController < ApplicationController
     @books = Book.first(10)
   end
 
+
   def show
     @book = Book.find(params[:id])
+    if @book.special?
+      render "show" and return
+    end
+    render  "product_layout"
   end
 
   private

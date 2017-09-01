@@ -16,4 +16,8 @@ class Book < ApplicationRecord
   def find_associations
     puts self.id if self.author.nil?
   end
+
+  def special?
+    true
+  end
 end
