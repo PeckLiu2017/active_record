@@ -1,4 +1,9 @@
 class ProductsController < ApplicationController
+  # layout 'product_layout'
+  # layout :product_layout
+  # controller.request.xhr? => ajax request
+  layout Proc.new { |controller| controller.request.xhr? ? "special_layout" : "product_layout" }
+
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
@@ -26,7 +31,7 @@ class ProductsController < ApplicationController
     # render inline: "xml.p {'Horrid coding practice!'}", type: :builder
     # render plain: "OK"
     # render body: "#{@products}"
-    render layout: false
+    # render layout: false
   end
 
   def show
@@ -39,11 +44,16 @@ class ProductsController < ApplicationController
     # render layout: "special_layout"
     # render json: @product, location: product_url(@product)
     # render :xml => { :error => 'Not found' }, :status => 404
-    render formats: :xml # Missing template？
+    render :xml => { :name => @product.name }
+    # render formats: :xml # Missing template？
   end
 
   private
   def product_params
     params.require(:product).permit(:name)
   end
+
+  # def product_layout
+  #   nil.blank? ? 'special_layout' : 'product_layout'
+  # end
 end
