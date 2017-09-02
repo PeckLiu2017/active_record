@@ -37,7 +37,6 @@ class BooksController < ApplicationController
     #   flash.now[:alert] = "Your book was not found"
     #   render "index"
     # end
-
     head :bad_request, location: book_path(@book)
   end
 
