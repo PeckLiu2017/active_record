@@ -1,0 +1,8 @@
+ProductsController	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^class ProductsController < ApplicationController$/;"	class	line:1
+destroy	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def destroy$/;"	method	line:7	class:ProductsController
+edit	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def edit$/;"	method	line:13	class:ProductsController
+update	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def update$/;"	method	line:17	class:ProductsController
+index	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def index$/;"	method	line:28	class:ProductsController
+show	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def show$/;"	method	line:37	class:ProductsController
+search	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def search$/;"	method	line:51	class:ProductsController
+product_params	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def product_params$/;"	method	line:58	class:ProductsController

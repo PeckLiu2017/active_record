@@ -48,6 +48,12 @@ class ProductsController < ApplicationController
     # render formats: :xml # Missing template？
   end
 
+  def search
+    @q = params[:q]
+    puts "#{@q}"
+    @product = Product.where('name = #{@q}')
+  end
+
   private
   def product_params
     params.require(:product).permit(:name)
