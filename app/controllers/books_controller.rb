@@ -7,7 +7,9 @@ class BooksController < ApplicationController
   def update
     @book = Book.find(params[:id])
     if @book.update(book_params)
-      redirect_to @book
+      # redirect_to @book
+      # redirect_back(fallback_location: root_path)
+      redirect_to :back
     else
       render 'edit'
       # render :edit
@@ -17,15 +19,22 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.first(10)
+    flash[:alert] = "Your book was not found"
   end
 
 
   def show
     @book = Book.find(params[:id])
-    if @book.special?
-      render "show" and return
+    # if @book.special?
+    #   render "show" and return
+    # end
+    # render  "product_layout"
+    # redirect_to action: :index
+    if @book.nil?
+      @books = Book.all
+      flash.now[:alert] = "Your book was not found"
+      render "index"
     end
-    render  "product_layout"
   end
 
   private

@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :people
   resources :books
   resources :products
-  root 'products#index'
+  resources :welcomes
+  root 'welcomes#index'
 end
