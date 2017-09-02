@@ -29,12 +29,16 @@ class BooksController < ApplicationController
     #   render "show" and return
     # end
     # render  "product_layout"
+
     # redirect_to action: :index
-    if @book.nil?
-      @books = Book.all
-      flash.now[:alert] = "Your book was not found"
-      render "index"
-    end
+
+    # if @book.nil?
+    #   @books = Book.all
+    #   flash.now[:alert] = "Your book was not found"
+    #   render "index"
+    # end
+
+    head :bad_request, location: book_path(@book)
   end
 
   private
