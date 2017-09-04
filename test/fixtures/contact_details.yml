@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  telephoone: MyString
+  email: MyString
+  wechat: MyString
+  person_id: 1
+
+two:
+  telephoone: MyString
+  email: MyString
+  wechat: MyString
+  person_id: 1

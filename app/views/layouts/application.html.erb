@@ -8,6 +8,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+      <div class="pull-right">
+        <%= link_to "Back to index", "/" %>
+      </div>
+    </div>
   </body>
 </html>

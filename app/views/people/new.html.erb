@@ -1,6 +1,21 @@
 
-<%= form_for @person do |person| %>
-  <%= text_field :person, :email %>
-  <%= text_field :person, :email_confirmation %>
-  <%= person.submit%>
+<%#= form_for @person do |person| %>
+  <%#= text_field :person, :email %>
+  <%#= text_field :person, :email_confirmation %>
+  <%#= person.submit%>
+<%# end %>
+<h1>Create People</h1>
+
+<%= simple_form_for @person do |f| %>
+  <div class="form-group">
+  <%= f.label :name %>
+  <%= f.input :name, :class => "form-control" %>
+  </div>
+  <%= f.fields_for :contact_details do |ff| %>
+  <div class="form-group">
+    <%= ff.label :telephone %>
+    <%= ff.text_field :telephone, :class => "form-control" %>
+  </div>
+  <% end %>
+  <%= f.submit 'Submit', :class => "btn btn-default" %>
 <% end %>

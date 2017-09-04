@@ -1,0 +1,29 @@
+
+<h1>Articles are coming soon!</h1>
+
+
+<h1>Listing Articles</h1>
+
+<div class="pull-right">
+  <%= link_to 'create', new_article_path %>
+</div>
+
+<table class="table">
+  <tr>
+    <th>Title</th>
+    <th>Summary</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= article.summary %></td>
+    <td><%= link_to "Show", article %></td>
+    <td><%= link_to "Edit", edit_article_path(article) %></td>
+    <td><%= link_to "Remove", article_path(article), method: :delete, data: { confirm: "Are you sure?" } %></td>
+  </tr>
+<% end %>
+</table>

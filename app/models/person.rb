@@ -6,14 +6,14 @@ class Person < ApplicationRecord
   # 下例terms_of_service的类型要为boolean
   # validates :terms_of_service, acceptance: true
   # 自定义可接受类型和错误提示信息，也可以将accept和message分开写。
-  validates :terms_of_service, acceptance: { accept: ['TRUE', 'accepted'], message: 'must be abided' }
+  # validates :terms_of_service, acceptance: { accept: ['TRUE', 'accepted'], message: 'must be abided' }
   # validates :terms_of_service, acceptance: { message: 'must be abided' }
   # validates :terms_of_service, acceptance: { accept: 'yes' }
-  validates :email, confirmation: true, uniqueness: { scope: :name,
-    message: "should happen once per name" }
-  validates :email_confirmation, presence: true
-  validates :name, length: { minimum: 6 }
-  validates :password, length: { in: 6..20 }
+  # validates :email, confirmation: true, uniqueness: { scope: :name,
+  #   message: "should happen once per name" }
+  # validates :email_confirmation, presence: true
+  # validates :name, length: { minimum: 4 }
+  # validates :password, length: { in: 6..20 }
   # validates :password, length: { is: 6 }
   # validates :name, uniqueness: { case_sensitive: false }
 
@@ -22,7 +22,10 @@ class Person < ApplicationRecord
   #   GoodnessValidator.new(person).validate
   # end
 
-  validates_each :name, :last_name do |record, attr, value|
-    record.errors.add(attr, 'must start with upper case') if value =~ /\A[[:lower:]]/
-  end
+  # validates_each :name, :last_name do |record, attr, value|
+  #   record.errors.add(attr, 'must start with upper case') if value =~ /\A[[:lower:]]/
+  # end
+
+  has_many :contact_details, :dependent => :destroy, :inverse_of => :person
+  accepts_nested_attributes_for :contact_details, :allow_destroy => true, :reject_if => :all_blank
 end
