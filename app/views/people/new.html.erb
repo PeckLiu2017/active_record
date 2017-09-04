@@ -14,7 +14,7 @@
   <%= f.fields_for :contact_details do |ff| %>
   <div class="form-group">
     <%= ff.label :telephone %>
-    <%= ff.text_field :telephone, :class => "form-control" %>
+    <%= ff.text_field :telephones, :class => "form-control" %>
   </div>
   <% end %>
   <%= f.submit 'Submit', :class => "btn btn-default" %>

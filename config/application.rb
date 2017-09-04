@@ -13,5 +13,8 @@ module ActiveRecord
     # -- all .rb files in that directory are automatically loaded.
      ActiveRecord::Base.lock_optimistically = false
      config.time_zone = "Beijing"
+    #  config.middleware.delete Rack::Runtime
+    # config.middleware.insert_after ActionDispatch::Executor, Lifo::Cache, page_cache: false
+    # config.middleware.use Rack::BounceFavicon
   end
 end

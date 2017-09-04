@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170904073225) do
+ActiveRecord::Schema.define(version: 20170904093125) do
 
   create_table "accounthistroys", force: :cascade do |t|
     t.string   "order"
@@ -122,7 +122,7 @@ ActiveRecord::Schema.define(version: 20170904073225) do
   end
 
   create_table "contact_details", force: :cascade do |t|
-    t.string   "telephone"
+    t.string   "telephones"
     t.string   "email"
     t.string   "wechat"
     t.integer  "person_id"

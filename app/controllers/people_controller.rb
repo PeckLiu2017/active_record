@@ -34,6 +34,6 @@ class PeopleController < ApplicationController
   end
   private
   def person_params
-    params.require(:person).permit(:name, :email, :email_confirmation, :time_zone, :contact_details_attributes => [:id, :telephone, :eamil, :wechat, :_destroy])
+    params.require(:person).permit(:name, :email, :email_confirmation, :time_zone, :contact_details_attributes => [:id, :eamil, :wechat, :_destroy, :telephones])
   end
 end
