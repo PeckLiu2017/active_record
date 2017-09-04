@@ -12,5 +12,6 @@ module ActiveRecord
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
      ActiveRecord::Base.lock_optimistically = false
+     config.time_zone = "Beijing"
   end
 end
