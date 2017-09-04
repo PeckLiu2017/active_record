@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :books
   resources :articles
   resources :clients
+  resources :addresses
   resources :products do
     collection do
       get :search
