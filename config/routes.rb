@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :people
   resources :books
   resources :articles
+  resources :clients
   resources :products do
     collection do
       get :search

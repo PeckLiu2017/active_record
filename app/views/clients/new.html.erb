@@ -1,0 +1,12 @@
+<h1>create client</h1>
+<%= simple_form_for @client do |f|%>
+<div class="form-group">
+  <%= f.input :name %>
+</div>
+<div class="form-group">
+  <%= select_tag(:role_id, options_for_select(Role.all.map{ |r| [r.info, r.id] }))%>
+</div>
+<div class="form-group">
+  <%= f.submit 'submit' %>
+</div>
+<% end %>
