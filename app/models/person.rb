@@ -32,4 +32,7 @@ class Person < ApplicationRecord
   has_many :address, :dependent => :destroy, :inverse_of => :person
   accepts_nested_attributes_for :contact_details, :allow_destroy => true, :reject_if => :all_blank
 
+  def to_param
+    "#{id}-#{name.parameterize}"
+  end
 end
