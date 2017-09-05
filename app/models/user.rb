@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_many :articles, dependent: :destroy
+  has_one :profile
+  delegate :gender, to: :profile
   after_initialize do |user|
     puts "You have initialized an object!"
   end
