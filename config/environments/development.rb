@@ -53,4 +53,5 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   # protect password
   config.filter_parameters << :password
+  config.active_job.queue_adapter = :sidekiq
 end
