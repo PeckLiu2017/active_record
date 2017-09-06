@@ -13,7 +13,7 @@
 <% @people.each do |person| %>
   <tr>
     <td><%= person.name %></td>
-    <td><%= person.updated_at %></td>
+    <td><%= raw person.updated_at %></td>
     <td><%= link_to "Show", person_path(person) %></td>
     <td><%= link_to "Edit", edit_person_path(person) %></td>
     <td><%= link_to "Remove", person_path(person), method: :delete, :remote => true, data: { confirm: "Are you sure?" } %></td>
