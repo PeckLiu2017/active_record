@@ -4,9 +4,10 @@ class UserMailer < ApplicationMailer
 
   def welcome_email(user)
     @user = user
+    email_with_name = %("#{@user.nickname}" <#{@user.email}>)
     @url = 'http://localhost:3000'
-    attachments = {}
-    attachments['filename.jpg'] = File.read('public/apple-touch-icon.png')
-    mail(to: '943207041@qq.com', subject: 'Welcome to My Awesome Site')
+    # attachments = {}
+    # attachments.inline['image.jpg'] = File.read('public/image.jpg')
+    mail(to: email_with_name, subject: 'Welcome to My Awesome Site')
   end
 end
