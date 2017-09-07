@@ -1,8 +1,9 @@
-require 'rest-client'
 class UserMailer < ApplicationMailer
   # default to: Proc.new { ['1111111@qq.com','22222222@qq.com'] },
   #   from: "xiaoyang20170204@gmail.com"
-  default from: "xiaoyang20170204@gmail.com"
+  # default
+  #   from: "xiaoyang20170204@gmail.com"
+
   layout 'mailer'
 
   def welcome_email(user)
@@ -19,15 +20,6 @@ class UserMailer < ApplicationMailer
     #  subject: 'Welcome to My Awesome Site',
     #  delivery_method_options: delivery_options)
     mail(to: 'darkspider2016@foxmail.com',subject: 'Welcome to My Awesome Site')
-  end
-
-  def send_simple_message
-      RestClient.post "https://api:key-..."
-          "api...",
-          :from => "Mailgun Sandbox <...>",
-          :to => "xiaoyang20170204@gmail.com <xiaoyang20170204@gmail.com>",
-          :subject => "Hello xiaoyang20170204@gmail.com",
-          :text => "Congratulations xiaoyang20170204@gmail.com, you just sent an email with Mailgun!  You are truly awesome!"
   end
 
   def receive(email)
