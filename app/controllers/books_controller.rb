@@ -1,4 +1,9 @@
 class BooksController < ApplicationController
+  def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+    render js: "alert('delete complete!');"
+  end
 
   def edit
     @book = Book.find(params[:id])
@@ -37,7 +42,7 @@ class BooksController < ApplicationController
     #   flash.now[:alert] = "Your book was not found"
     #   render "index"
     # end
-    head :bad_request, location: book_path(@book)
+    # head :bad_request, location: book_path(@book)
   end
 
   private
