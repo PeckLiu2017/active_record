@@ -22,14 +22,6 @@ class UsersController < ApplicationController
   def edit
   end
 
-  def send_simple_message
-      RestClient.post "https://api:key-20995113eba3a0f1cf5993e7ccce45c9"
-          "@api.mailgun.net/v3/sandbox799ef89b0fd246e2a69a34beb28aecf9.mailgun.org/messages",
-          :from => "Mailgun Sandbox <postmaster@sandbox799ef89b0fd246e2a69a34beb28aecf9.mailgun.org>",
-          :to => "xiaoyang20170204@gmail.com <xiaoyang20170204@gmail.com>",
-          :subject => "Hello xiaoyang20170204@gmail.com",
-          :text => "Congratulations xiaoyang20170204@gmail.com, you just sent an email with Mailgun!  You are truly awesome!"
-  end
   # POST /users
   # POST /users.json
   def create

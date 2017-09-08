@@ -4,13 +4,14 @@ Rails.application.routes.draw do
   resources :people
   resources :books
   resources :articles
-  resources :clients
+  # resources :clients
   resources :addresses
   resources :products do
     collection do
       get :search
     end
   end
+  get '/clients/:id', to: 'clients#show', as: 'client'
   resources :welcomes
   root 'welcomes#index'
 end
