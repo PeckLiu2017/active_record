@@ -14,9 +14,9 @@
     <%# binding.pry %>
       <tr>
         <td><%= order.product %></td>
-        <td><%#= link_to 'Show', client_order_path(order) %></td>
-        <td><%= link_to 'Edit', edit_client_order_path(order) %></td>
-        <td><%#= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [order.client, order] %></td>
+        <td><%= link_to 'Edit', [:edit,order.client, order] %></td>
+        <td><%= link_to 'Destroy', [order.client, order], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
