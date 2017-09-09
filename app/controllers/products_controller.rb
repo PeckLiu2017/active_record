@@ -49,9 +49,7 @@ class ProductsController < ApplicationController
   end
 
   def search
-    @q = params[:q]
-    puts "#{@q}"
-    @product = Product.where('name = #{@q}')
+    @products = Product.where("name LIKE ?", params[:q] ).limit(5)
   end
 
   private
