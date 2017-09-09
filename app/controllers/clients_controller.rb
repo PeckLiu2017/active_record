@@ -1,3 +1,4 @@
+require 'prawn'
 class ClientsController < ApplicationController
   def new
     @client = Client.new
@@ -21,8 +22,26 @@ class ClientsController < ApplicationController
   #   @client = Client.find(params[:id])
   # end
 
+  def download_pdf
+    client = Client.find(params[:id])
+    # send_data generate_pdf(client),
+    #           filename: "#{client.name}.pdf",
+    #           type: "application/pdf"
+    send_file("#{Rails.root}/public/image.jpg",
+              filename: "#{client.name}.jpg",
+              type: "application/jpeg")
+  end
+
   private
   def client_params
     params.require(:client).permit(:name, :telephone)
+  end
+
+  def generate_pdf(client)
+    Prawn::Document.new do
+      text client.name, align: :center
+      text "Name: #{client.name}"
+      text "Telephone: #{client.telephone}"
+    end.render
   end
 end

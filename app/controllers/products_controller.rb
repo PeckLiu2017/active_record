@@ -49,7 +49,9 @@ class ProductsController < ApplicationController
   end
 
   def search
+    # binding.pry
     @products = Product.where("name LIKE ?", params[:q] ).limit(5)
+    puts "#{request.remote_ip}"
   end
 
   private
