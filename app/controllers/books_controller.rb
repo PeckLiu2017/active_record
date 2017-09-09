@@ -29,7 +29,13 @@ class BooksController < ApplicationController
 
 
   def show
-    @book = Book.find(params[:id])
+    @book = if !params[:author_id].nil?
+      Book.find(params[:id])
+    else
+      Book.where("id = #{params[:id]}")
+      # Book.find_by_sql("SELECT books.* FROM books WHERE id = 1008 AND author_id = 1 ")
+    end
+
     # if @book.special?
     #   render "show" and return
     # end

@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   end
 
   get '/clients/:id', to: 'clients#show'
+  get 'books/:id/:author_id', to: 'books#show'
+
   resources :welcomes
   root 'welcomes#index'
 
