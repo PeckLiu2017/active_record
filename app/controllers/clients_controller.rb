@@ -16,21 +16,33 @@ class ClientsController < ApplicationController
 
   def show
     @client = Client.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+      # pdf = Prawn::Document.new
+      # pdf.text 'Hello World'
+      send_data generate_pdf(@client),
+        filename: "#{@client.name}.pdf",
+        type: 'application/pdf',
+        disposition: 'inline'
+      end
+    end
   end
 
   # def client
   #   @client = Client.find(params[:id])
   # end
 
-  def download_pdf
-    client = Client.find(params[:id])
-    # send_data generate_pdf(client),
-    #           filename: "#{client.name}.pdf",
-    #           type: "application/pdf"
-    send_file("#{Rails.root}/public/image.jpg",
-              filename: "#{client.name}.jpg",
-              type: "application/jpeg")
-  end
+  # def download_pdf
+  #   client = Client.find(params[:id])
+  #   # send_data generate_pdf(client),
+  #   #           filename: "#{client.name}.pdf",
+  #   #           type: "application/pdf"
+  #   send_file("#{Rails.root}/public/image.jpg",
+  #             filename: "#{client.name}.jpg",
+  #             type: "application/jpeg")
+  # end
 
   private
   def client_params

@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'clients/:id.pdf', to: 'clients#show'
   get 'clients/download_pdf/:id', to: 'clients#download_pdf'
   get '/clients/:id', to: 'clients#show'
   get 'books/:id/:author_id', to: 'books#show'

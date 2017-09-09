@@ -38,7 +38,10 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'sidekiq'
 gem 'rest-client'
+
+# render pdf
 gem 'prawn'
+gem 'responders'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
