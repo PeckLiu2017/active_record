@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   end
   resource :profile
   resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # get 'clients/:id.pdf', to: 'clients#show'
+  get '/clients/:status' => 'clients#index', foo: 'bar'
+  get 'clients/download_pdf/:id', to: 'clients#download_pdf'
+  get '/clients/:id', to: 'clients#show'
+  get 'books/:id/:author_id', to: 'books#show'
   resources :people, :clients, :books, :articles
   # resources :clients do
   #   resources :orders
@@ -19,10 +23,7 @@ Rails.application.routes.draw do
     end
   end
 
-  # get 'clients/:id.pdf', to: 'clients#show'
-  get 'clients/download_pdf/:id', to: 'clients#download_pdf'
-  get '/clients/:id', to: 'clients#show'
-  get 'books/:id/:author_id', to: 'books#show'
+
 
   resources :welcomes do
     collection do

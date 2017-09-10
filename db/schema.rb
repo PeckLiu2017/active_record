@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170908092337) do
+ActiveRecord::Schema.define(version: 20170910125731) do
 
   create_table "accounthistroys", force: :cascade do |t|
     t.string   "order"
@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(version: 20170908092337) do
     t.integer  "role_id"
     t.integer  "orders_count"
     t.integer  "lock_version"
+    t.string   "status"
   end
 
   create_table "clients_roles", id: false, force: :cascade do |t|

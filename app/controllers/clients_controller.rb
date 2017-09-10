@@ -14,6 +14,14 @@ class ClientsController < ApplicationController
     end
   end
 
+  def index
+    @clients = if params[:status] == 'inactive'
+      Client.where('status LIKE ?', params[:status])
+    else
+      @clients = Client.last(10)
+    end
+  end
+
   def show
     @client = Client.find(params[:id])
 
