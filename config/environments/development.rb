@@ -57,4 +57,5 @@ Rails.application.configure do
   # protect password
   config.filter_parameters << :password
   config.active_job.queue_adapter = :sidekiq
+  # config.wrap_parameters = true
 end

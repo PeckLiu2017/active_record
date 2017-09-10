@@ -29,9 +29,9 @@ Rails.application.routes.draw do
       get :stream
       get :show_sentences
     end
-    # member do
-    #   get :show_sentences
-    # end
+    member do
+      get :show_sentences
+    end
   end
   root 'welcomes#index'
 

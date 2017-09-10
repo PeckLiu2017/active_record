@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
-
+  # wrap_parameters :order, include: [:product]
   # GET /orders
   # GET /orders.json
   def index
