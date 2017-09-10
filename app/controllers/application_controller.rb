@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  def default_url_options
+    { locale: I18n.locale }
+  end
   # http_basic_authenticate_with name: 'peck', password: '111111'
   # 'lifo' is username, 'world' is password
   # USERS = { "lifo" => "world" }
