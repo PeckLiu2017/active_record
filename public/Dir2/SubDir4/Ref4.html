@@ -1,23 +1,37 @@
-<h1>public/Dir2/SubDir4/Ref4.html</h1>
-<p><a href="../Dir1/SubDir1/Ref1.html">"../Dir1/SubDir1/Ref1.html"</a>--it lead to http://localhost:3000/Dir2/Dir1/SubDir1/Ref1.html</p>
-<p><a href="../Dir1">"../Dir1"</a>--it lead to http://localhost:3000/Dir2/Dir1</p>
-<p><a href="../../Dir1/SubDir1/Ref1.html">"../../Dir1/SubDir1/Ref1.html"</a>--it lead to http://localhost:3000/Dir1/SubDir1/Ref1.html</p>
-<!-- up 2 levels can equal to Dir1, so add 2 "../" in front if the route ,and down to Ref1.html -->
-<p><a href="../../Dir1/SubDir2/Ref2.html">"../../Dir1/SubDir2/Ref2.html"</a>--it lead to http://localhost:3000/Dir1/SubDir2/Ref2.html</p>
-<p><a href="SubDir3/Ref3.html">"SubDir3/Ref3.html"</a>--it lead to http://localhost:3000/Dir2/SubDir4/SubDir3/Ref3.html</p>
-<p><a href="../SubDir3/Ref3.html">"../SubDir3/Ref3.html"</a>--it lead to http://localhost:3000/Dir2/SubDir3/Ref3.html</p>
-<p><a href="SubDir5/Ref3.html">"SubDir5/Ref3.html"</a>--it lead to http://localhost:3000/Dir2/SubDir4/SubDir5/Ref3.html</p>
-<!-- find complete route -->
-<p><a href="/SubDir5">"/SubDir5/Ref3.html"</a>--it lead to http://localhost:3000/SubDir5/Ref3.html</p>
-<!-- /SubDir5 set SubDir5 as the path follow root -->
-<p><a href="../SubDir5/Ref5.html">"../SubDir5/Ref5.html"</a>--it lead to http://localhost:3000/Dir2/SubDir5/Ref5.html</p>
-<!-- ../ up 1 to Dir2, ../SubDir5 reach /Dir2/SubDir5/-->
-<p><a href="../">"../"</a>--it lead to http://localhost:3000/Dir2/</p>
-<!-- ../ up 1 to Dir2, ../SubDir5 reach /Dir2/SubDir5/-->
-<p><a href=".">"."</a>--it lead to http://localhost:3000/Dir2/SubDir4/, and '.' equal to './'</p>
-<!-- . display current directory-->
-<p><a href="./SubDir5/Ref5.html">"./SubDir5/Ref5.html"</a>--it lead to http://localhost:3000/Dir2/SubDir4/, and '.' equal to './'</p>
-<!-- . display current directory-->
-<p><a href="../SubDir4/SubDir5/Ref5.html">"../SubDir4/SubDir5/Ref5.html"</a>--it lead to http://localhost:3000/Dir2/SubDir4/SubDir5/Ref5.html</p>
-<!-- ../ up 1 to Dir2, ../SubDir4/SubDir5 reach /Dir2/SubDir5/-->
-<p><a href="../Ref6.html">"../Ref6.html"</a>--it lead to http://localhost:3000/Dir2/Ref6.html</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+
+  <body style="text-align:center">
+    <h3>目标：从本页路径:public/Dir2/SubDir4/Ref4.html到public/Dir1/SubDir1/Ref1.html，我的主页是http://localhost:3000</h3>
+    <p>要从本页到达public/Dir1/SubDir1/Ref1.html，需要向上三级到达public，然后向下三级到达到达public/Dir1/SubDir1/Ref1.html</p>
+    <p>本页的当前路径是public/Dir2/SubDir4</p>
+    <p><a href=".">"."</a>--it lead to http://localhost:3000/Dir2/SubDir4/ in my project, and '.' equal to './'</p>
+    <p>本页的上一级目录是public/Dir2</p>
+    <p><a href="../">"../"</a>--it lead to http://localhost:3000/Dir2/ in my project</p>
+    <p>本页的上上级目录是public</p>
+    <p><a href="../../">"../../"</a>--it lead to http://localhost:3000 in my project</p>
+    <p>所以到达目标页面的最终路径如下：</p>
+    <p><a href="../../Dir1/SubDir1/Ref1.html">"../../Dir1/SubDir1/Ref1.html"</a>--it lead to http://localhost:3000/Dir1/SubDir1/Ref1.html</p>
+    <p>同理，到达public/Dir1/SubDir2/Ref2.html：</p>
+    <p><a href="../../Dir1/SubDir2/Ref2.html">"../../Dir1/SubDir2/Ref2.html"</a>--it lead to http://localhost:3000/Dir1/SubDir2/Ref2.html</p>
+    <p>同理，到达public/Dir2/SubDir3/Ref3.html：</p>
+    <p><a href="../SubDir3/Ref3.html">"../SubDir3/Ref3.html"</a>--it lead to http://localhost:3000/Dir2/SubDir3/Ref3.html</p>
+    <p>接下来到达比它的目录深浅层次还深的public/Dir2/SubDir4/SubDir5/Ref5.html，因为它与Ref5.html的父目录同级，所以可以直接在目录开头写SubDir5/</p>
+    <p><a href="SubDir5/Ref5.html">"SubDir5/Ref5.html"</a>--it lead to http://localhost:3000/Dir2/SubDir4/SubDir5/Ref5.html</p>
+    <p>或者这样写：</p>
+    <p><a href="./SubDir5/Ref5.html">"./SubDir5/Ref5.html"</a>--it lead to http://localhost:3000/Dir2/SubDir5/Ref5.html</p>
+    <p>引用跟它同一个目录的public/Dir2/SubDir4/Ref7.html</p>
+    <p><a href="Ref7.html">"Ref7.html"</a>--it lead to http://localhost:3000/Dir2/SubDir4/Ref7.html</p>
+    <p>引用跟它父目录同一等级的public/Dir2/Ref6.html</p>
+    <p><a href="../Ref6.html">"../Ref6.html"</a>--it lead to http://localhost:3000/Dir2/Ref6.html</p>
+
+    <p>看完相对路径看绝对路径，比如我想要到达public/Dir2/SubDir4/SubDir5/Ref5.html，他从项目路径根目录 http://localhost:3000/（文件路径public） 开始，加上href的值，最后路径是http://localhost:3000/Dir2/SubDir4/SubDir5/Ref5.html</p>
+    <p><a href="/Dir2/SubDir4/SubDir5/Ref5.html">"/Dir2/SubDir4/SubDir5/Ref5.html"</a>--it lead to http://localhost:3000/Dir2/SubDir4/SubDir5/Ref5.html</p>
+
+  </body>
+</head>
+
+</html>

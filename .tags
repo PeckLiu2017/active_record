@@ -45,16 +45,6 @@ p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref2.html	/^<p><a href="
 p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref2.html	/^<p><a href="..\/Dir1\/SubDir2\/image.jpg">"..\/Dir1\/SubDir2\/image.jpg"<\/a>--it lead to http:\/\/localhost:3000\/Dir1\/SubDir2\/image.jpg<\/p>$/;"	function	line:5
 h	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir3/Ref3.html	/^<h1>public\/Dir2\/SubDir3\/Ref3.html<\/h1>$/;"	function	line:1
 h	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir2/Ref2.html	/^<h1>public\/Dir1\/SubDir2\/Ref2.html<\/h1>$/;"	function	line:1
-h	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<h1>public\/Dir1\/SubDir1\/Ref1.html<\/h1>$/;"	function	line:1
-p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/SubDir2\/Ref2.html">"..\/SubDir2\/Ref2.html" -- to public\/Dir1\/SubDir2\/Ref2.html<\/a><\/p>$/;"	function	line:2
-p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/Dir2\/SubDir3\/Ref3.html">"..\/..\/Dir2\/SubDir3\/Ref3.html" -- to public\/Dir2\/SubDir3\/Ref3.html<\/a><\/p>$/;"	function	line:3
-p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/..\/Dir1">"..\/..\/Dir1" -- to public\/Dir2\/SubDir3\/Ref3.html<\/a>无论在前面加多少..\/都是一样的<\/p> $/;"	function	line:5
-p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/Dir2\/SubDir3\/Ref3.html">"..\/Dir2\/SubDir3\/Ref3.html" -- to public\/Dir2\/SubDir3\/Ref3.html<\/a><\/p>$/;"	function	line:7
-p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/SubDir3\/Ref3.html">"..\/SubDir3\/Ref3.html"" -- to public\/Dir2\/SubDir3\/Ref3.html<\/a><\/p>$/;"	function	line:8
-p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/SubDir3\/Ref3.html">"..\/..\/SubDir3\/Ref3.html" -- to public\/Dir2\/SubDir3\/Ref3.html<\/a><\/p>$/;"	function	line:9
-p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/Dir2\/SubDir4\/Ref4.html">"..\/..\/Dir2\/SubDir4\/Ref4.html" -- to public\/Dir2\/SubDir4\/Ref4.html<\/a><\/p>$/;"	function	line:11
-p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/Dir2\/SubDir4\/SubDir5\/Ref5.html">"..\/..\/Dir2\/SubDir4\/SubDir5\/Ref5.html" -- to public\/Dir2\/SubDir4\/SubDir5\/Ref5.html<\/a><\/p>$/;"	function	line:12
-p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/..\/Dir2\/Ref6.html">"..\/..\/..\/Dir2\/Ref6.html" -- to public\/Dir2\/Ref6.html<\/a><\/p>$/;"	function	line:13
 h	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref6.html	/^<h1>public\/Dir2\/Ref6.html<\/h1>$/;"	function	line:1
 p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref6.html	/^<p><a href="..\/Dir1\/SubDir1\/Ref1.html">"..\/Dir1\/SubDir1\/Ref1.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir1\/SubDir1\/Ref1.html<\/p>$/;"	function	line:2
 p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref6.html	/^<p><a href="..\/Dir1\/SubDir2\/Ref2.html">"..\/Dir1\/SubDir2\/Ref2.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir1\/SubDir2\/Ref2.html<\/p>$/;"	function	line:3
@@ -66,18 +56,48 @@ p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref6.html	/^<p><a href="
 p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref6.html	/^<p><a href="\/">"\/" -- to root '\/'<\/a><\/p>$/;"	function	line:10
 p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref6.html	/^<p><a href="..\/..\/..\/Dir1\/SubDir1">"..\/..\/Dir1" -- to public\/Dir2\/SubDir3\/Ref3.html<\/a>无论在前面加多少..\/都是一样的<\/p>$/;"	function	line:11
 h	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/SubDir5/Ref5.html	/^<h1>public\/Dir2\/SubDir4\/SubDir5\/Ref5.html<\/h1>$/;"	function	line:1
-h	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<h1>public\/Dir2\/SubDir4\/Ref4.html<\/h1>$/;"	function	line:1
-p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<p><a href="..\/Dir1\/SubDir1\/Ref1.html">"..\/Dir1\/SubDir1\/Ref1.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/Dir1\/SubDir1\/Ref1.html<\/p>$/;"	function	line:2
-p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<p><a href="..\/Dir1">"..\/Dir1"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/Dir1<\/p>$/;"	function	line:3
-p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<p><a href="..\/..\/Dir1\/SubDir1\/Ref1.html">"..\/..\/Dir1\/SubDir1\/Ref1.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir1\/SubDir1\/Ref1.html<\/p>$/;"	function	line:4
-p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<p><a href="..\/..\/Dir1\/SubDir2\/Ref2.html">"..\/..\/Dir1\/SubDir2\/Ref2.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir1\/SubDir2\/Ref2.html<\/p>$/;"	function	line:6
-p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<p><a href="SubDir3\/Ref3.html">"SubDir3\/Ref3.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir4\/SubDir3\/Ref3.html<\/p>$/;"	function	line:7
-p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<p><a href="..\/SubDir3\/Ref3.html">"..\/SubDir3\/Ref3.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir3\/Ref3.html<\/p>$/;"	function	line:8
-p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<p><a href="SubDir5\/Ref3.html">"SubDir5\/Ref3.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir4\/SubDir5\/Ref3.html<\/p>$/;"	function	line:9
-p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<p><a href="\/SubDir5">"\/SubDir5\/Ref3.html"<\/a>--it lead to http:\/\/localhost:3000\/SubDir5\/Ref3.html<\/p>$/;"	function	line:11
-p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<p><a href="..\/SubDir5\/Ref5.html">"..\/SubDir5\/Ref5.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir5\/Ref5.html<\/p>$/;"	function	line:13
-p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<p><a href="..\/">"..\/"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/<\/p>$/;"	function	line:15
-p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<p><a href=".">"."<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir4\/, and '.' equal to '.\/'<\/p>$/;"	function	line:17
-p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<p><a href=".\/SubDir5\/Ref5.html">".\/SubDir5\/Ref5.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir4\/, and '.' equal to '.\/'<\/p>$/;"	function	line:19
-p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<p><a href="..\/SubDir4\/SubDir5\/Ref5.html">"..\/SubDir4\/SubDir5\/Ref5.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir4\/SubDir5\/Ref5.html<\/p>$/;"	function	line:21
-p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<p><a href="..\/Ref6.html">"..\/Ref6.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/Ref6.html<\/p>$/;"	function	line:23
+h	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<h1>public\/Dir1\/SubDir1\/Ref1.html<\/h1>$/;"	function	line:1
+p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/SubDir2\/Ref2.html">"..\/SubDir2\/Ref2.html" -- to public\/Dir1\/SubDir2\/Ref2.html<\/a><\/p>$/;"	function	line:2
+p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/Dir2\/SubDir3\/Ref3.html">"..\/..\/Dir2\/SubDir3\/Ref3.html" -- to public\/Dir2\/SubDir3\/Ref3.html<\/a><\/p>$/;"	function	line:3
+p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/..\/Dir1">"..\/..\/Dir1" -- to public\/Dir2\/SubDir3\/Ref3.html<\/a><\/p>$/;"	function	line:4
+p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/Dir2\/SubDir3\/Ref3.html">"..\/Dir2\/SubDir3\/Ref3.html" -- to public\/Dir2\/SubDir3\/Ref3.html<\/a><\/p>$/;"	function	line:5
+p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/SubDir3\/Ref3.html">"..\/SubDir3\/Ref3.html"" -- to public\/Dir2\/SubDir3\/Ref3.html<\/a><\/p>$/;"	function	line:6
+p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/SubDir3\/Ref3.html">"..\/..\/SubDir3\/Ref3.html" -- to public\/Dir2\/SubDir3\/Ref3.html<\/a><\/p>$/;"	function	line:7
+p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/Dir2\/SubDir4\/Ref4.html">"..\/..\/Dir2\/SubDir4\/Ref4.html" -- to public\/Dir2\/SubDir4\/Ref4.html<\/a><\/p>$/;"	function	line:8
+p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/Dir2\/SubDir4\/SubDir5\/Ref5.html">"..\/..\/Dir2\/SubDir4\/SubDir5\/Ref5.html" -- to public\/Dir2\/SubDir4\/SubDir5\/Ref5.html<\/a><\/p>$/;"	function	line:9
+p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/..\/Dir2\/Ref6.html">"..\/..\/..\/Dir2\/Ref6.html" -- to public\/Dir2\/Ref6.html<\/a><\/p>$/;"	function	line:10
+h	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref7.html	/^<h1>public\/Dir2\/SubDir4\/Ref7.html<\/h1>$/;"	function	line:1
+html	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<html>$/;"	function	line:2
+head	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<head>$/;"	function	line:4
+meta	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^  <meta charset="UTF-8">$/;"	function	line:5
+body	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^  <body style="text-align:center">$/;"	function	line:7
+h	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <h3>目标：从本页路径:public\/Dir2\/SubDir4\/Ref4.html到public\/Dir1\/SubDir1\/Ref1.html，我的主页是http:\/\/localhost:3000<\/h3>$/;"	function	line:8
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p>要从本页到达public\/Dir1\/SubDir1\/Ref1.html，需要向上三级到达public，然后向下三级到达到达public\/Dir1\/SubDir1\/Ref1.html<\/p>$/;"	function	line:9
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p>本页的当前路径是public\/Dir2\/SubDir4<\/p>$/;"	function	line:10
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p><a href=".">"."<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir4\/ in my project, and '.' equal to '.\/'<\/p>$/;"	function	line:11
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p>本页的上一级目录是public\/Dir2<\/p>$/;"	function	line:12
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p><a href="..\/">"..\/"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/ in my project<\/p>$/;"	function	line:13
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p>本页的上上级目录是public<\/p>$/;"	function	line:14
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p><a href="..\/..\/">"..\/..\/"<\/a>--it lead to http:\/\/localhost:3000 in my project<\/p>$/;"	function	line:15
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p>所以到达目标页面的最终路径如下：<\/p>$/;"	function	line:16
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p><a href="..\/..\/Dir1\/SubDir1\/Ref1.html">"..\/..\/Dir1\/SubDir1\/Ref1.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir1\/SubDir1\/Ref1.html<\/p>$/;"	function	line:17
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p>同理，到达public\/Dir1\/SubDir2\/Ref2.html：<\/p>$/;"	function	line:18
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p><a href="..\/..\/Dir1\/SubDir2\/Ref2.html">"..\/..\/Dir1\/SubDir2\/Ref2.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir1\/SubDir2\/Ref2.html<\/p>$/;"	function	line:19
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p>同理，到达public\/Dir2\/SubDir3\/Ref3.html：<\/p>$/;"	function	line:20
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p><a href="..\/SubDir3\/Ref3.html">"..\/SubDir3\/Ref3.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir3\/Ref3.html<\/p>$/;"	function	line:21
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p>接下来到达比它的目录深浅层次还深的public\/Dir2\/SubDir4\/SubDir5\/Ref5.html，因为它与Ref5.html的父目录同级，所以可以直接在目录开头写SubDir5\/<\/p>$/;"	function	line:22
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p><a href="SubDir5\/Ref5.html">"SubDir5\/Ref5.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir4\/SubDir5\/Ref5.html<\/p>$/;"	function	line:23
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p>或者这样写：<\/p>$/;"	function	line:24
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p><a href=".\/SubDir5\/Ref5.html">".\/SubDir5\/Ref5.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir5\/Ref5.html<\/p>$/;"	function	line:25
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p>引用跟它同一个目录的public\/Dir2\/SubDir4\/Ref7.html<\/p>$/;"	function	line:26
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p><a href="Ref7.html">"Ref7.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir4\/Ref7.html<\/p>$/;"	function	line:27
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p>引用跟它父目录同一等级的public\/Dir2\/Ref6.html<\/p>$/;"	function	line:28
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p><a href="..\/Ref6.html">"..\/Ref6.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/Ref6.html<\/p>$/;"	function	line:29
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p>看完相对路径看绝对路径，比如我想要到达public\/Dir2\/SubDir4\/SubDir5\/Ref5.html，他从项目路径根目录 http:\/\/localhost:3000\/（文件路径public） 开始，加上href的值，最后路径是http:\/\/localhost:3000\/Dir2\/SubDir4\/SubDir5\/Ref5.html<\/p>$/;"	function	line:31
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^    <p><a href="\/Dir2\/SubDir4\/SubDir5\/Ref5.html">"\/Dir2\/SubDir4\/SubDir5\/Ref5.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir4\/SubDir5\/Ref5.html<\/p>$/;"	function	line:32
+绝对路径与相对路径的原理	/Users/peckliu/Ruby project/active_record/markdown note/aboslute path VS relative path.md	/^# 绝对路径与相对路径的原理$/;"	function	line:1
+绝对路径与相对路径	/Users/peckliu/Ruby project/active_record/markdown note/aboslute path VS relative path.md	/^### 绝对路径与相对路径$/;"	function	line:2
+相对路径的写法	/Users/peckliu/Ruby project/active_record/markdown note/aboslute path VS relative path.md	/^### 相对路径的写法$/;"	function	line:4
+几种相对路径表示方法	/Users/peckliu/Ruby project/active_record/markdown note/aboslute path VS relative path.md	/^### 几种相对路径表示方法$/;"	function	line:13
+页面链接绝对路径与相对路径	/Users/peckliu/Ruby project/active_record/markdown note/aboslute path VS relative path.md	/^### 页面链接绝对路径与相对路径$/;"	function	line:18
+总结：	/Users/peckliu/Ruby project/active_record/markdown note/aboslute path VS relative path.md	/^### 总结：$/;"	function	line:33
