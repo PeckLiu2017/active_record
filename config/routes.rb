@@ -24,7 +24,6 @@ Rails.application.routes.draw do
   end
 
 
-
   resources :welcomes do
     collection do
       get :stream

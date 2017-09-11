@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   # layout :product_layout
   # controller.request.xhr? => ajax request
   layout Proc.new { |controller| controller.request.xhr? ? "special_layout" : "product_layout" }
+  # around_action :wrap_in_transaction, only: :update
 
   def destroy
     @product = Product.find(params[:id])
@@ -26,6 +27,7 @@ class ProductsController < ApplicationController
   end
 
   def index
+    # p session
     @products = Product.first(10)
     # render inline: "<% @products.each do |p| %><p><%= p.name %></p><% end %>"
     # render inline: "xml.p {'Horrid coding practice!'}", type: :builder
@@ -44,7 +46,7 @@ class ProductsController < ApplicationController
     # render layout: "special_layout"
     # render json: @product, location: product_url(@product)
     # render :xml => { :error => 'Not found' }, :status => 404
-    render :xml => { :name => @product.name }
+    # render :xml => { :name => @product.name }
     # render formats: :xml # Missing template？
   end
 
@@ -57,6 +59,16 @@ class ProductsController < ApplicationController
   private
   def product_params
     params.require(:product).permit(:name)
+  end
+
+  def wrap_in_transaction
+    ActiveRecord::Base.transaction do
+      begin
+        yield
+      ensure
+        raise ActiveRecord::Rollback
+      end
+    end
   end
 
   # def product_layout

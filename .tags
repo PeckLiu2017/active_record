@@ -1,11 +1,3 @@
-ProductsController	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^class ProductsController < ApplicationController$/;"	class	line:1
-destroy	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def destroy$/;"	method	line:7	class:ProductsController
-edit	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def edit$/;"	method	line:13	class:ProductsController
-update	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def update$/;"	method	line:17	class:ProductsController
-index	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def index$/;"	method	line:28	class:ProductsController
-show	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def show$/;"	method	line:37	class:ProductsController
-search	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def search$/;"	method	line:51	class:ProductsController
-product_params	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def product_params$/;"	method	line:58	class:ProductsController
 * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets	/Users/peckliu/Ruby project/active_record/app/assets/stylesheets/application.scss	/^ * Any CSS and SCSS file within this directory, lib\/assets\/stylesheets, vendor\/assets\/stylesheets,$/;"	function	line:5
 ArticlesController	/Users/peckliu/Ruby project/active_record/app/controllers/articles_controller.rb	/^class ArticlesController < ApplicationController$/;"	class	line:1
 new	/Users/peckliu/Ruby project/active_record/app/controllers/articles_controller.rb	/^  def new$/;"	method	line:2	class:ArticlesController
@@ -30,3 +22,39 @@ update	/Users/peckliu/Ruby project/active_record/app/controllers/users_controlle
 destroy	/Users/peckliu/Ruby project/active_record/app/controllers/users_controller.rb	/^  def destroy$/;"	method	line:72	class:UsersController
 set_user	/Users/peckliu/Ruby project/active_record/app/controllers/users_controller.rb	/^    def set_user$/;"	method	line:82	class:UsersController
 user_params	/Users/peckliu/Ruby project/active_record/app/controllers/users_controller.rb	/^    def user_params$/;"	method	line:87	class:UsersController
+LoginFilter	/Users/peckliu/Ruby project/active_record/app/controllers/login_filter.rb	/^class LoginFilter$/;"	class	line:1
+before	/Users/peckliu/Ruby project/active_record/app/controllers/login_filter.rb	/^  def self.before(controller)$/;"	singleton method	line:3	class:LoginFilter
+LoginFilter	/Users/peckliu/Ruby project/active_record/app/filters/login_filters_controller.rb	/^class LoginFilter$/;"	class	line:1
+before	/Users/peckliu/Ruby project/active_record/app/filters/login_filters_controller.rb	/^  def self.before(controller)$/;"	singleton method	line:3	class:LoginFilter
+ProductsController	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^class ProductsController < ApplicationController$/;"	class	line:1
+destroy	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def destroy$/;"	method	line:8	class:ProductsController
+edit	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def edit$/;"	method	line:14	class:ProductsController
+update	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def update$/;"	method	line:18	class:ProductsController
+index	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def index$/;"	method	line:29	class:ProductsController
+show	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def show$/;"	method	line:39	class:ProductsController
+search	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def search$/;"	method	line:53	class:ProductsController
+product_params	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def product_params$/;"	method	line:60	class:ProductsController
+wrap_in_transaction	/Users/peckliu/Ruby project/active_record/app/controllers/products_controller.rb	/^  def wrap_in_transaction$/;"	method	line:64	class:ProductsController
+ApplicationController	/Users/peckliu/Ruby project/active_record/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	class	line:1
+Rails	/Users/peckliu/Ruby project/active_record/test/lib/generators/rails/my_helper_generator_test.rb	/^class Rails::MyHelperGeneratorTest < Rails::Generators::TestCase$/;"	class	line:7
+h	/Users/peckliu/Ruby project/active_record/Dir1/SubDir1/Ref1.html	/^<h1>Ref1.html<\/h1>$/;"	function	line:1
+h	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref2.html	/^<h1>Ref2.html--public\/Dir2\/Ref2.html<\/h1>$/;"	function	line:1
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref2.html	/^<p><a href="..\/Dir1\/SubDir1\/Ref1.html">"..\/Dir1\/SubDir1\/Ref1.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir1\/SubDir1\/Ref1.html<\/p>$/;"	function	line:2
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref2.html	/^<p><a href="..\/SubDir3\/Ref3.html">"..\/SubDir3\/Ref3.html"<\/a>--it lead to http:\/\/localhost:3000\/SubDir3\/Ref3.html<\/p>$/;"	function	line:3
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref2.html	/^<p><a href="SubDir3\/Ref3.html">"SubDir3\/Ref3.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir3\/Ref3.html<\/p>$/;"	function	line:4
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref2.html	/^<p><a href="..\/Dir1\/SubDir2\/image.jpg">"..\/Dir1\/SubDir2\/image.jpg"<\/a>--it lead to http:\/\/localhost:3000\/Dir1\/SubDir2\/image.jpg<\/p>$/;"	function	line:5
+h	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref6.html	/^<h1>public\/Dir2\/Ref6.html<\/h1>$/;"	function	line:1
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref6.html	/^<p><a href="..\/Dir1\/SubDir1\/Ref1.html">"..\/Dir1\/SubDir1\/Ref1.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir1\/SubDir1\/Ref1.html<\/p>$/;"	function	line:2
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref6.html	/^<p><a href="..\/SubDir3\/Ref3.html">"..\/SubDir3\/Ref3.html"<\/a>--it lead to http:\/\/localhost:3000\/SubDir3\/Ref3.html<\/p>$/;"	function	line:3
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref6.html	/^<p><a href="SubDir3\/Ref3.html">"SubDir3\/Ref3.html"<\/a>--it lead to http:\/\/localhost:3000\/Dir2\/SubDir3\/Ref3.html<\/p>$/;"	function	line:4
+p	/Users/peckliu/Ruby project/active_record/public/Dir2/Ref6.html	/^<p><a href="..\/Dir1\/SubDir2\/image.jpg">"..\/Dir1\/SubDir2\/image.jpg"<\/a>--it lead to http:\/\/localhost:3000\/Dir1\/SubDir2\/image.jpg<\/p>$/;"	function	line:5
+h	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/Ref4.html	/^<h1>public\/Dir2\/SubDir4\/Ref4.html<\/h1>$/;"	function	line:1
+h	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir4/SubDir5/Ref5.html	/^<h1>public\/Dir2\/SubDir4\/SubDir5\/Ref5.html<\/h1>$/;"	function	line:1
+h	/Users/peckliu/Ruby project/active_record/public/Dir2/SubDir3/Ref3.html	/^<h1>public\/Dir2\/SubDir3\/Ref3.html<\/h1>$/;"	function	line:1
+h	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir2/Ref2.html	/^<h1>public\/Dir1\/SubDir2\/Ref2.html<\/h1>$/;"	function	line:1
+h	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<h1>public\/Dir1\/SubDir1\/Ref1.html<\/h1>$/;"	function	line:1
+p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/SubDir2\/Ref2.html">"..\/SubDir2\/Ref2.html" -- to public\/Dir1\/SubDir2\/Ref2.html<\/a><\/p>$/;"	function	line:2
+p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/Dir2\/SubDir3\/Ref3.html">"..\/..\/Dir2\/SubDir3\/Ref3.html" -- to public\/Dir2\/SubDir3\/Ref3.html<\/a><\/p>$/;"	function	line:3
+p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/Dir2\/SubDir4\/Ref4.html">"..\/..\/Dir2\/SubDir4\/Ref4.html" -- to public\/Dir2\/SubDir4\/Ref4.html<\/a><\/p>$/;"	function	line:4
+p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/Dir2\/SubDir4\/SubDir5\/Ref5.html">"..\/..\/Dir2\/SubDir4\/SubDir5\/Ref5.html" -- to public\/Dir2\/SubDir4\/SubDir5\/Ref5.html<\/a><\/p>$/;"	function	line:5
+p	/Users/peckliu/Ruby project/active_record/public/Dir1/SubDir1/Ref1.html	/^<p><a href="..\/..\/..\/Dir2\/Ref6.html">"..\/..\/..\/Dir2\/Ref6.html" -- to public\/Dir2\/Ref6.html<\/a><\/p>$/;"	function	line:6

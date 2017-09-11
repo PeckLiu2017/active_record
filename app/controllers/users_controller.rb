@@ -7,23 +7,23 @@ class UsersController < ApplicationController
   def index
     @users = User.first(10)
 
-    respond_to do |format|
-      format.html
-      # can't write as 'render xml: @users',
-      # Otherwise the application will render the XML in the default mode.
-      format.xml { @users }
-      format.json { render json: @users }
-    end
+    # respond_to do |format|
+    #   format.html
+    #   # can't write as 'render xml: @users',
+    #   # Otherwise the application will render the XML in the default mode.
+    #   format.xml { @users }
+    #   format.json { render json: @users }
+    # end
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
-    respond_to do |format|
-      format.html
-      format.xml { @user }
-      format.json { render json: @users }
-    end
+    # respond_to do |format|
+    #   format.html
+    #   format.xml { @user }
+    #   format.json { render json: @users }
+    # end
   end
 
   # GET /users/new
