@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -35,3 +36,28 @@
 </head>
 
 </html>
+=======
+<h1>public/Dir2/SubDir4/Ref4.html</h1>
+<p><a href="../Dir1/SubDir1/Ref1.html">"../Dir1/SubDir1/Ref1.html"</a>--it lead to http://localhost:3000/Dir2/Dir1/SubDir1/Ref1.html</p>
+<p><a href="../Dir1">"../Dir1"</a>--it lead to http://localhost:3000/Dir2/Dir1</p>
+<p><a href="../../Dir1/SubDir1/Ref1.html">"../../Dir1/SubDir1/Ref1.html"</a>--it lead to http://localhost:3000/Dir1/SubDir1/Ref1.html</p>
+<!-- up 2 levels can equal to Dir1, so add 2 "../" in front if the route ,and down to Ref1.html -->
+<p><a href="../../Dir1/SubDir2/Ref2.html">"../../Dir1/SubDir2/Ref2.html"</a>--it lead to http://localhost:3000/Dir1/SubDir2/Ref2.html</p>
+<p><a href="SubDir3/Ref3.html">"SubDir3/Ref3.html"</a>--it lead to http://localhost:3000/Dir2/SubDir4/SubDir3/Ref3.html</p>
+<p><a href="../SubDir3/Ref3.html">"../SubDir3/Ref3.html"</a>--it lead to http://localhost:3000/Dir2/SubDir3/Ref3.html</p>
+<p><a href="SubDir5/Ref3.html">"SubDir5/Ref3.html"</a>--it lead to http://localhost:3000/Dir2/SubDir4/SubDir5/Ref3.html</p>
+<!-- find complete route -->
+<p><a href="/SubDir5">"/SubDir5/Ref3.html"</a>--it lead to http://localhost:3000/SubDir5/Ref3.html</p>
+<!-- /SubDir5 set SubDir5 as the path follow root -->
+<p><a href="../SubDir5/Ref5.html">"../SubDir5/Ref5.html"</a>--it lead to http://localhost:3000/Dir2/SubDir5/Ref5.html</p>
+<!-- ../ up 1 to Dir2, ../SubDir5 reach /Dir2/SubDir5/-->
+<p><a href="../">"../"</a>--it lead to http://localhost:3000/Dir2/</p>
+<!-- ../ up 1 to Dir2, ../SubDir5 reach /Dir2/SubDir5/-->
+<p><a href=".">"."</a>--it lead to http://localhost:3000/Dir2/SubDir4/, and '.' equal to './'</p>
+<!-- . display current directory-->
+<p><a href="./SubDir5/Ref5.html">"./SubDir5/Ref5.html"</a>--it lead to http://localhost:3000/Dir2/SubDir4/, and '.' equal to './'</p>
+<!-- . display current directory-->
+<p><a href="../SubDir4/SubDir5/Ref5.html">"../SubDir4/SubDir5/Ref5.html"</a>--it lead to http://localhost:3000/Dir2/SubDir4/SubDir5/Ref5.html</p>
+<!-- ../ up 1 to Dir2, ../SubDir4/SubDir5 reach /Dir2/SubDir5/-->
+<p><a href="../Ref6.html">"../Ref6.html"</a>--it lead to http://localhost:3000/Dir2/Ref6.html</p>
+>>>>>>> 124a07c... get a right demo
