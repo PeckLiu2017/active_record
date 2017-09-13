@@ -1,4 +1,3 @@
-require 'rest-client'
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
@@ -42,7 +41,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        ImportWorkerJob.perform_later(3003) # for test
+        ImportWorkerJob.perform_later(3003)
         UserMailer.welcome_email(@user).deliver_now
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
