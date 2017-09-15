@@ -21,11 +21,12 @@ module ActiveRecord
     config.generators do |g|
       g.orm             :active_record
       g.template_engine :erb
-      g.test_framework  :test_unit, fixture: false
+      g.test_framework  :shoulda, fixture: false
       g.scaffold_stylesheet false
       g.stylesheets     false
       g.javascripts     false
       # g.helper          :my_helper
+      g.fallbacks[:shoulda] = :test_unit
     end
   end
 end
