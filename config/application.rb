@@ -21,10 +21,11 @@ module ActiveRecord
     config.generators do |g|
       g.orm             :active_record
       g.template_engine :erb
-      g.test_framework  :test_unit, fixture: true
+      g.test_framework  :test_unit, fixture: false
       g.scaffold_stylesheet false
       g.stylesheets     false
       g.javascripts     false
+      g.helper          :my_helper
     end
   end
 end

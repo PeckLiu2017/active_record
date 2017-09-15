@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :movies
+  resources :posts
   resources :heros
   concern :order_resources do
     resources :orders
