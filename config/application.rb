@@ -17,5 +17,14 @@ module ActiveRecord
     #  config.middleware.delete Rack::Runtime
     # config.middleware.insert_after ActionDispatch::Executor, Lifo::Cache, page_cache: false
     # config.middleware.use Rack::BounceFavicon
+
+    config.generators do |g|
+      g.orm             :active_record
+      g.template_engine :erb
+      g.test_framework  :test_unit, fixture: true
+      g.scaffold_stylesheet false
+      g.stylesheets     false
+      g.javascripts     false
+    end
   end
 end

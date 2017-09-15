@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :heros
   concern :order_resources do
     resources :orders
   end
