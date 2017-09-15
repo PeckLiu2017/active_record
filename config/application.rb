@@ -25,7 +25,7 @@ module ActiveRecord
       g.scaffold_stylesheet false
       g.stylesheets     false
       g.javascripts     false
-      g.helper          :my_helper
+      # g.helper          :my_helper
     end
   end
 end

@@ -1,3 +1,3 @@
-      module MoviesHelper
-        attr_reader :movies, :movie
-      end
+module MoviesHelper
+  attr_reader :movies, :movie
+end
